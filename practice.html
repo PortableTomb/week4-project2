@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-
 <title>jQuery Practice</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="css/style.css" rel="stylesheet">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="practice.js"></script>
-<script type="text/javascript" src="help.js"></script>
-
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -51,15 +46,17 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <h2>You can click on the question text to reveal a hint!</h2>
       <h3>Write your answers in practice.js</h3><br><br>
+      
       <p id="1">1. When 'Submit' is clicked, add the contents of the textbox below the button in a h3 element.</p>
       <p id="hidden1">Try using .val() and a variable<br></p>
-      <input type="text" class="textInput">
-      <button class="btn btn-info" id="submitBtn">Submit</button>
+      <input type="text" id="text" class="textInput">
+      <button id="submitBtn" class="btn btn-info">Submit</button>
+      
       <hr>
       <p id="2">2. When the checkbox is clicked, reveal the hidden message...</p>
       <p id="hidden2">Google .toggleClass()<br></p>
       <div class="chex">
-        <input type="checkbox">
+        <input id="#check_id" type="checkbox">
       </div>
       <h2 class="hidden">You are a jQuery God!</h2>
       <hr>
@@ -71,19 +68,19 @@
           <p id="hidden4">Google .text() so you can grab the values from each td. A conditional statement might be needed here.<br></p>
           <p id="5">5. When clicked, only display cats weighing 10+ lbs:<br>
           <p id="hidden5">Consider googling .each() to iterate over all of the children.. Another conditional needed. (:<br></p>
-            <button class="btn btn-warning">Heavy Cats</button>
+            <button id="heavy"class="btn btn-warning">Heavy Cats</button>
           </p>
           <p id="6">6. When clicked, uppercase all cat names: <br>
           <p id="hidden6">This should look similar to #4 & #5. Try out .toUpperCase().<br></p>
-            <button class="btn btn-success">YELL NAMES</button>
+            <button id="yell" class="btn btn-success">YELL NAMES</button>
           </p>
           <p id="7">7. Show and hide the table with this button: <br>
             <p id="hidden7">Easy peasy, right? .toggle() is handy.<br></p>
-            <button class="btn btn-primary">Toggle Table</button>
+            <button id="togTable" class="btn btn-primary">Toggle Table</button>
           </p>
         </div>
         <div class="col-xs-6">
-          <table class="table table-striped">
+          <table id="tableId" class="table table-striped">
             <thead>
               <tr>
                 <th>Name</th>
@@ -95,27 +92,27 @@
               <tr>
                 <td>Mittens</td>
                 <td>8</td>
-                <td>Content</td>
+                <td class="con">Content</td>
               </tr>
               <tr>
                 <td>Boots</td>
                 <td>9</td>
-                <td>Content</td>
+                <td class="con">Content</td>
               </tr>
-              <tr>
+              <tr class="heavyCat">
                 <td>Fluffs</td>
                 <td>11</td>
-                <td>Hangry</td>
+                <td class="hang">Hangry</td>
               </tr>
-              <tr>
+              <tr class="heavyCat">
                 <td>Tiny</td>
-                <td>18</td>
-                <td>Hangry</td>
+                <td >18</td>
+                <td class="hang">Hangry</td>
               </tr>
               <tr>
                 <td>Mr Whiskers</td>
                 <td>7</td>
-                <td>Content</td>
+                <td class="con">Content</td>
               </tr>
             </tbody>
           </table>
@@ -165,6 +162,8 @@
 
 <!-- Footer -->
 <footer></footer>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="practice.js"></script>
+<script type="text/javascript" src="help.js"></script>
 </body>
 </html>
