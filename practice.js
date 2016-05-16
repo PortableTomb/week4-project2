@@ -3,14 +3,10 @@
 $(document).ready(function(){
 
 //1. When 'Submit' is clicked, add the contents of the textbox below the button in a h3 element.
-$("#submitBtn").click(function() {
-	var userText = $("input:text").val();
-	$("#text").text(userText);
-});
-
-$("#submitBtn").click(function() {
-    $("input[type='text'].textInput").val("userText");
-    $("p #1").append("<h3>userText<h3>");
+$("button.btn-info").click(function() {
+	var userText = $('input[type="text"]#text').val();
+    // alert(userText); This is working! Yay!
+      $("<h3></h3>").insertAfter("button.btn-info").append(userText);
 });
 
 //2. When the checkbox is clicked, reveal the hidden message...
