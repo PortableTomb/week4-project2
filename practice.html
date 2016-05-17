@@ -51,12 +51,12 @@
       <p id="hidden1">Try using .val() and a variable<br></p>
       <input type="text" id="text" class="textInput">
       <button id="submitBtn" class="btn btn-info">Submit</button>
-      
+      <!-- <h3 id="text"></h3> -->
       <hr>
       <p id="2">2. When the checkbox is clicked, reveal the hidden message...</p>
       <p id="hidden2">Google .toggleClass()<br></p>
-      <div class="chex">
-        <input id="#check_id" type="checkbox">
+      <div >
+        <input id="#check_id" class="chex" type="checkbox">
       </div>
       <h2 class="hidden">You are a jQuery God!</h2>
       <hr>
@@ -122,24 +122,25 @@
       <p id="8">8. Disable the input field, the checkbox, and the link to Google:</p>
       <p id="hidden8">.prop() will come in handy for the first one. Then, check out .preventDefault() for the link.<br></p>
       <div id="disableUs">
-        <input type="text" placeholder="You can't type here">
+          <input type="text" class="no" placeholder="You can't type here">
         <br>
         <br>
-        <label>
-          <input type="checkbox" value="">
+           <label><input id="chkToBePrevented" type="checkbox">
           You can't check this box</label>
         <br>
         <br>
-        <a href="https://google.com">No more Google</a> </div>
+            <a class="disabled" href="https://google.com">No more Google</a> 
+        </div>
       <hr>
       <p id="9">9. Select the third option from the dropdown, and append it to the page.</p>
       <p id="hidden9">Try using .find() here.<br></p>
-      <select class="dropdown">
+      <select id="dropdown">
         <option value="Select an option below">Select an option below</option>
         <option value="Wrong Choice">Wrong Choice</option>
         <option value="Wrong Choice">Wrong Choice</option>
         <option value="Wahoo!!!">Wahoo!!!</option>
       </select>
+      <p class="3"></p>
       <hr>
       <p id="10">10. Alert the user how many items are in the list</p>
       <p id="hidden10">Let's iterate over those children again. Try using a counter with this one.<br></p>
