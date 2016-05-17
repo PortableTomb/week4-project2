@@ -65,6 +65,15 @@ $("a.disabled").click(function(e) {
 //Works. Not correct. Appends a new item to the bottom of the list.
 // $(".dropdown").append("<option value=\"Wahoo\">New Item</option>");
 
+//10. Alert the user how many items are in the list. Let's iterate over those children again. 
+//Try using a counter with this one.
+
+//Counts through the li in #alertList and alerts the number of items
+$('#alertList li').each(function (i) {
+    $(this).click(function () {
+        alert (i+1); 
+    });
+});
 
 });
 
