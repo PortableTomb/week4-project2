@@ -79,6 +79,26 @@ $('#alertList li').each(function (i) {
 
 //11. Create buttons that add and remove list items to the alert list.</p>
 //Try inserting straight up HTML button. Use a click function and counter variable.
+var count = 3; //Counter starts at three
+
+$("#submitBtn1").click(function(){ // On button click
+	$("#alertList").append("<li>list item</li>"); //appened w/ list item
+		count++; //counts up
+    	$("#counter1").html("List item count is: "+count); //DIV with counter + text.
+       		 });
+
+$("#submitBtn2").click(function(){
+	$("#alertList li:last").remove(); 
+		count--; // counts down
+    	$("#counter1").html("List item count is: "+count);
+        });
+
+
+
+
+
+
+
 
 $("#submitBtn1").click(function(){
 	$("#alertList").append("<li>list item</li>"); 
