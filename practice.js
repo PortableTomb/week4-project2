@@ -54,9 +54,16 @@ $("a.disabled").click(function(e) {
     return false;
 });
 
+//9.Select the third option from the dropdown, and append it to the page. Try using .find() here.
+  $("#dropdown").change(function() {
+		var text= $('#dropdown').find('option:selected').text();
+		var value= $("#dropdown option:selected").val();
+		// alert(text);
+		$("<h3></h3>").insertAfter("p.3").append(text);
+});
 
-
-
+//Works. Not correct. Appends a new item to the bottom of the list.
+// $(".dropdown").append("<option value=\"Wahoo\">New Item</option>");
 
 
 });
