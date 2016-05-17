@@ -11,11 +11,7 @@ $("button.btn-info").click(function() {
 
 //2. When the checkbox is clicked, reveal the hidden message...
 $(".chex").click(function() {
-var allCheckboxes=$('[type=checkbox]');
-if ($('#check_id').is(":checked")){
-	$(".hidden2").toggleClass(chex);
-}
-});
+
 
 //3. Add a new cat to the table.
 $('#tableId tr:last').after("<tr><td>New Cat</td><td>6</td><td>Content</td></tr>");
@@ -45,9 +41,22 @@ $("#yell").click(function() {
     $("#tableId").toggle();
 });
 
-
 //8.Disable the input field, the checkbox, and the link to Google.
 // .prop() will come in handy for the first one. Then, check out .preventDefault() for the link
+// Disabled Inout Field
+ $("input.no").prop("disabled",true);
+// Disabled Checkbox
+ $('#chkToBePrevented').click(function(){
+    return false;
+});
+// Disabled Link
+$("a.disabled").click(function(e) {
+    return false;
+});
+
+
+
+
 
 
 });
